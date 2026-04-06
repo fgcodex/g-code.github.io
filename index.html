@@ -45,7 +45,6 @@
         .yellow { background: #ffbd2e; }
         .green { background: #27c93f; }
 
-        /* Logo principal */
         .main-logo {
             width: 90px;
             margin-bottom: 25px;
@@ -70,42 +69,42 @@
 
         p { line-height: 1.6; font-size: 0.95rem; margin: 8px 0 20px 0; }
 
-        /* Iconos de tecnologías */
+        /* Tech icons centrados */
         .tech-icons {
             display: flex;
-            gap: 16px;
+            gap: 24px;
             align-items: center;
+            justify-content: center;
             margin: 12px 0 25px 0;
             flex-wrap: wrap;
-        }
-
-        .tech-icons img {
-            width: 36px;
-            height: 36px;
-            object-fit: contain;
-            filter: brightness(0.9);
-            transition: filter 0.2s;
-        }
-
-        .tech-icons img:hover {
-            filter: brightness(1.3);
         }
 
         .tech-label {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 4px;
+            gap: 6px;
             font-size: 0.65rem;
             color: #8b949e;
         }
 
-        /* Links de proyectos */
+        .tech-label img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            transition: filter 0.2s;
+        }
+
+        .tech-label:hover img { filter: brightness(1.4); }
+        .tech-label:hover { color: #c9d1d9; }
+
+        /* Project links centrados */
         .project-links {
             display: flex;
-            gap: 20px;
+            gap: 30px;
             margin: 12px 0 25px 0;
             align-items: center;
+            justify-content: center;
         }
 
         .project-links a {
@@ -125,44 +124,33 @@
             width: 40px;
             height: 40px;
             object-fit: contain;
-            filter: brightness(0.7);
             transition: filter 0.2s;
         }
 
-        .project-links a:hover img {
-            filter: brightness(1.2);
-        }
+        .project-links a:hover img { filter: brightness(1.3); }
 
-        /* Botón Discord */
+        /* Botón Discord solo icono */
         .discord-btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
             margin-top: 25px;
             text-decoration: none;
-            color: #58a6ff;
-            border: 1px solid #58a6ff;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: bold;
+            border: 1px solid #5865F2;
+            padding: 10px 14px;
+            border-radius: 8px;
             transition: all 0.3s ease;
+            background: transparent;
         }
 
         .discord-btn:hover {
-            background: #58a6ff;
-            color: #0d1117;
-            box-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
+            background: #5865F2;
+            box-shadow: 0 0 15px rgba(88, 101, 242, 0.5);
         }
 
         .discord-btn img {
-            width: 22px;
-            height: 22px;
-            filter: invert(1);
-        }
-
-        .discord-btn:hover img {
-            filter: invert(0);
+            width: 28px;
+            height: 28px;
         }
     </style>
 </head>
@@ -175,36 +163,30 @@
             <div class="dot green"></div>
         </div>
 
-        <!-- Logo principal -->
         <img src="logo.png" alt="G.Code" class="main-logo">
 
-        <!-- About Me -->
         <div><span class="prompt">></span> <span class="command">About_me</span></div>
         <p>
             <strong>G.Code | 16yo Dev</strong><br>
             Multi-skilled in Luau, Python, 3D Modeling &amp; Animation.
         </p>
 
-        <!-- Iconos de tecnologías -->
+        <!-- Tech icons -->
         <div class="tech-icons">
             <div class="tech-label">
-                <!-- Logo Roblox/Luau -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Roblox_logo.svg/512px-Roblox_logo.svg.png" alt="Luau">
+                <img src="https://cdn.simpleicons.org/roblox/ffffff" alt="Luau">
                 <span>Luau</span>
             </div>
             <div class="tech-label">
-                <!-- Logo Python -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/115px-Python-logo-notext.svg.png" alt="Python">
+                <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python">
                 <span>Python</span>
             </div>
             <div class="tech-label">
-                <!-- Logo Blender -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/939px-Blender_logo_no_text.svg.png" alt="3D">
+                <img src="https://cdn.simpleicons.org/blender/E87D0D" alt="3D">
                 <span>3D</span>
             </div>
             <div class="tech-label">
-                <!-- Ícono animación (usando un gif/svg genérico) -->
-                <img src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png" alt="Animation">
+                <img src="https://cdn.simpleicons.org/adobeaftereffects/9999FF" alt="Animation">
                 <span>Animation</span>
             </div>
         </div>
@@ -213,12 +195,12 @@
         <div><span class="prompt">></span> <span class="command">projects</span></div>
         <div class="project-links">
             <a href="https://www.youtube.com/@helloworldx64" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/800px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube">
-                Showcases
+                <img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube">
+                <span>Showcases</span>
             </a>
             <a href="https://github.com/fgcodex" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/900px-Octicons-mark-github.svg.png" alt="GitHub">
-                Libraries
+                <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub">
+                <span>Libraries</span>
             </a>
         </div>
 
@@ -226,8 +208,7 @@
         <div><span class="prompt">></span> <span class="command">contact --status:open</span> <span class="cursor"></span></div>
 
         <a href="https://discord.com/users/1479682746594099201" target="_blank" class="discord-btn">
-            <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord">
-            Get in touch
+            <img src="https://cdn.simpleicons.org/discord/5865F2" alt="Discord">
         </a>
     </div>
 
