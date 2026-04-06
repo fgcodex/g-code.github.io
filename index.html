@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G.Code | Portfolio</title>
     <style>
-       
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
         body {
-            background-color: #0d1117; 
+            background-color: #0d1117;
             color: #c9d1d9;
             font-family: 'JetBrains Mono', monospace;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
             padding: 20px;
+            box-sizing: border-box;
         }
 
         .terminal {
@@ -33,7 +32,6 @@
             position: relative;
         }
 
-      
         .window-buttons {
             position: absolute;
             top: 15px;
@@ -47,17 +45,17 @@
         .yellow { background: #ffbd2e; }
         .green { background: #27c93f; }
 
-        .logo {
+        /* Logo principal */
+        .main-logo {
             width: 90px;
             margin-bottom: 25px;
             display: block;
-            border-radius: 50%;
+            mix-blend-mode: screen;
         }
 
         .prompt { color: #58a6ff; font-weight: bold; }
         .command { color: #7ee787; }
-        
-      
+
         .cursor {
             display: inline-block;
             width: 10px;
@@ -70,64 +68,167 @@
 
         @keyframes blink { 50% { opacity: 0; } }
 
-        p { line-height: 1.6; font-size: 0.95rem; }
+        p { line-height: 1.6; font-size: 0.95rem; margin: 8px 0 20px 0; }
 
-        .projects {
+        /* Iconos de tecnologías */
+        .tech-icons {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin: 12px 0 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .tech-icons img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            filter: brightness(0.9);
+            transition: filter 0.2s;
+        }
+
+        .tech-icons img:hover {
+            filter: brightness(1.3);
+        }
+
+        .tech-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.65rem;
             color: #8b949e;
-            border-left: 2px solid #30363d;
-            padding-left: 15px;
-            margin: 15px 0;
         }
 
-        .contact-btn {
-            color: #58a6ff;
+        /* Links de proyectos */
+        .project-links {
+            display: flex;
+            gap: 20px;
+            margin: 12px 0 25px 0;
+            align-items: center;
+        }
+
+        .project-links a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
             text-decoration: none;
-            border: 1px solid #58a6ff;
-            padding: 8px 18px;
-            border-radius: 6px;
-            display: inline-block;
-            margin-top: 25px;
-            transition: all 0.3s ease;
-            font-weight: bold;
+            color: #8b949e;
+            font-size: 0.7rem;
+            transition: color 0.2s;
         }
 
-        .contact-btn:hover {
+        .project-links a:hover { color: #c9d1d9; }
+
+        .project-links img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            filter: brightness(0.7);
+            transition: filter 0.2s;
+        }
+
+        .project-links a:hover img {
+            filter: brightness(1.2);
+        }
+
+        /* Botón Discord */
+        .discord-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 25px;
+            text-decoration: none;
+            color: #58a6ff;
+            border: 1px solid #58a6ff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .discord-btn:hover {
             background: #58a6ff;
             color: #0d1117;
             box-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
+        }
+
+        .discord-btn img {
+            width: 22px;
+            height: 22px;
+            filter: invert(1);
+        }
+
+        .discord-btn:hover img {
+            filter: invert(0);
         }
     </style>
 </head>
 <body>
 
     <div class="terminal">
-      
         <div class="window-buttons">
             <div class="dot red"></div>
             <div class="dot yellow"></div>
             <div class="dot green"></div>
         </div>
 
-       
-        <img src="logo.png" alt="G.Code" class="logo">
+        <!-- Logo principal -->
+        <img src="logo.png" alt="G.Code" class="main-logo">
 
+        <!-- About Me -->
         <div><span class="prompt">></span> <span class="command">About_me</span></div>
         <p>
             <strong>G.Code | 16yo Dev</strong><br>
-            Multi-skilled in Luau, Python, 3D Modeling & Animation.
+            Multi-skilled in Luau, Python, 3D Modeling &amp; Animation.
         </p>
-        
-        <div><span class="prompt">></span> <span class="command">projects</span></div>
-        <div class="projects">
-            > inventory_system.py (1000+ lines of Python logic)<br>
-            > combat_engine.luau (Custom animations & physics)<br>
-            > stylized_blender_assets.rbxl (3D props & assets)
+
+        <!-- Iconos de tecnologías -->
+        <div class="tech-icons">
+            <div class="tech-label">
+                <!-- Logo Roblox/Luau -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Roblox_logo.svg/512px-Roblox_logo.svg.png" alt="Luau">
+                <span>Luau</span>
+            </div>
+            <div class="tech-label">
+                <!-- Logo Python -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/115px-Python-logo-notext.svg.png" alt="Python">
+                <span>Python</span>
+            </div>
+            <div class="tech-label">
+                <!-- Logo Blender -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/939px-Blender_logo_no_text.svg.png" alt="3D">
+                <span>3D</span>
+            </div>
+            <div class="tech-label">
+                <!-- Ícono animación (usando un gif/svg genérico) -->
+                <img src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png" alt="Animation">
+                <span>Animation</span>
+            </div>
         </div>
 
+        <!-- Projects -->
+        <div><span class="prompt">></span> <span class="command">projects</span></div>
+        <div class="project-links">
+            <a href="https://www.youtube.com/@helloworldx64" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/800px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube">
+                Showcases
+            </a>
+            <a href="https://github.com/fgcodex" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/900px-Octicons-mark-github.svg.png" alt="GitHub">
+                Libraries
+            </a>
+        </div>
+
+        <!-- Contact -->
         <div><span class="prompt">></span> <span class="command">contact --status:open</span> <span class="cursor"></span></div>
-        
-      
-        <a href="https://discord.com/" target="_blank" class="contact-btn">Get in touch</a>
+
+        <a href="https://discord.com/users/1479682746594099201" target="_blank" class="discord-btn">
+            <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord">
+            Get in touch
+        </a>
     </div>
 
 </body>
