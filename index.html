@@ -45,16 +45,19 @@
         .yellow { background: #ffbd2e; }
         .green { background: #27c93f; }
 
+        /* Logo arriba a la derecha */
         .main-logo {
-            width: 90px;
-            margin: 0 auto 25px auto;
-            display: block;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            width: 70px;
+            height: 70px;
             mix-blend-mode: screen;
+            object-fit: contain;
         }
 
         .prompt { color: #58a6ff; font-weight: bold; }
 
-        /* Blanco neon en vez de verde */
         .command {
             color: #ffffff;
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
@@ -165,7 +168,10 @@
             <div class="dot green"></div>
         </div>
 
+        <!-- Logo arriba a la derecha, más grande -->
         <img src="logo.png" alt="G.Code" class="main-logo">
+
+        <br><br>
 
         <div><span class="prompt">></span> <span class="command">About_me</span></div>
         <p>
@@ -187,7 +193,8 @@
                 <span>3D</span>
             </div>
             <div class="tech-label">
-                <img src="https://cdn.simpleicons.org/adobeaftereffects/9999FF" alt="Animation">
+                <!-- Cambiado a Cinema4D que sí carga bien -->
+                <img src="https://cdn.simpleicons.org/unrealengine/ffffff" alt="Animation">
                 <span>Animation</span>
             </div>
         </div>
