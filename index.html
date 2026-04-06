@@ -1,58 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>G.Code</title>
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.Code | Portfolio</title>
+    <style>
+        /* Importamos una fuente pro de programador */
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
-    .container {
-      max-width: 700px;
-      padding: 20px;
-    }
+        body {
+            background-color: #0d1117; /* Color oscuro estilo GitHub */
+            color: #c9d1d9;
+            font-family: 'JetBrains Mono', monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+        }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+        .terminal {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            max-width: 650px;
+            width: 100%;
+            text-align: left;
+            position: relative;
+        }
 
-    p {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
+        /* Estilo para los botones de la ventana (Rojo, Amarillo, Verde) */
+        .window-buttons {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            gap: 8px;
+        }
 
-    a {
-      color: white;
-      text-decoration: none;
-      border: 1px solid white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      transition: 0.2s ease;
-    }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
 
-    a:hover {
-      background: white;
-      color: black;
-    }
-  </style>
+        .logo {
+            width: 90px;
+            margin-bottom: 25px;
+            display: block;
+            border-radius: 50%;
+            border: 2px solid #58a6ff;
+        }
+
+        .prompt { color: #58a6ff; font-weight: bold; }
+        .command { color: #7ee787; }
+        
+        /* Cursor animado */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: #58a6ff;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        @keyframes blink { 50% { opacity: 0; } }
+
+        p { line-height: 1.6; font-size: 0.95rem; }
+
+        .projects {
+            color: #8b949e;
+            border-left: 2px solid #30363d;
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+
+        .contact-btn {
+            color: #58a6ff;
+            text-decoration: none;
+            border: 1px solid #58a6ff;
+            padding: 8px 18px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .contact-btn:hover {
+            background: #58a6ff;
+            color: #0d1117;
+            box-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>&lt;R&gt; G.Code</h1>
-    <p>Generalist Developer — Luau, Python, 3D, Animation</p>
-    <a href="https://discord.com/">Contact Me</a>
-  </div>
+
+    <div class="terminal">
+      
+        <div class="window-buttons">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+        </div>
+
+       
+        <img src="logo.png" alt="G.Code" class="logo">
+
+        <div><span class="prompt">guest@gcode:~$</span> <span class="command">whoami</span></div>
+        <p>
+            <strong>G.Code | 16yo Dev</strong><br>
+            Relocating to Richmond, CA (June 2026).<br>
+            Multi-skilled in Luau, Python, 3D Modeling & Animation.
+        </p>
+        
+        <div><span class="prompt">guest@gcode:~$</span> <span class="command">ls projects/</span></div>
+        <div class="projects">
+            > inventory_system.py (1000+ lines of Python logic)<br>
+            > combat_engine.luau (Custom animations & physics)<br>
+            > stylized_blender_assets.rbxl (3D props & assets)
+        </div>
+
+        <div><span class="prompt">guest@gcode:~$</span> <span class="command">contact --status:open</span> <span class="cursor"></span></div>
+        
+      
+        <a href="https://discord.com/" target="_blank" class="contact-btn">Get in touch</a>
+    </div>
+
 </body>
 </html>
